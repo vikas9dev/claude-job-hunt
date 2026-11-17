@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": 1,
+      "company": "Acme Payments",
+      "company_key": "acme payments",
+      "role": "Backend Engineer II",
+      "date": "2026-10-28",
+      "tier": "Tier-1",
+      "yoe": "3-6",
+      "tech_stack": "Java, Spring Boot, Kafka, AWS",
+      "location": "Bengaluru (Hybrid)",
+      "ctc": "24-32 LPA",
+      "score": {
+        "value": 12,
+        "max": 14,
+        "capped": false,
+        "raw": "12/14"
+      },
+      "verdict": "✅ Apply",
+      "apply_via": "🤝 Referral First",
+      "priority": "Dream",
+      "channel": "LinkedIn",
+      "recommendation": "Ask two peers for a referral; apply direct if no reply in a week.",
+      "analysis_md": "> Analyzed: 28 Oct 2026\n\n### Score: 12/14 — ✅ Apply\n\n| Criterion | Score | Notes |\n|---|---|---|\n| Tech stack | 2/2 | Java, Spring Boot, Kafka, AWS — matches §5 |\n| YOE band | 2/2 | JD asks 3–6, you have ~4 |\n| Role type | 2/2 | Backend, target level |\n| Company tier | 2/2 | Tier-1 |\n| Location | 2/2 | Bengaluru hybrid |\n| CTC potential | 1/2 | Reported 24–32 LPA — between Floor and Target |\n| WLB risk | 1/2 | 🟡 WLB rating 3.4, mixed reviews |\n\n### Red flags\n- \"Fast-paced\" appears three times in the JD.\n\n### How to apply — 🤝 Referral First\n① People search: https://www.linkedin.com/search/results/people/?keywords=Acme%20backend%20engineer\n② Connection note:\n> Hi <Name> — I'm a Java/Spring backend engineer (~4y). I moved a payments service to Kafka with exactly-once handling. Saw the Backend Engineer II role on your team — would you be open to referring me?\n③ Fallback: if no reply in 7 days, apply on the careers page.\n",
+      "posted_date": "2026-10-25",
+      "jd_text": "About the role\nWe are looking for a Backend Engineer to build payment APIs.\n\nRequirements\n- 3+ years with Java and Spring Boot\n- Experience with Kafka, PostgreSQL and AWS\n- Good understanding of microservices and REST API design\n\nNice to have\n- Kubernetes, Redis\n",
+      "status": "📝 To Do",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-10-28"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/acme payments-1"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 2,
+      "company": "Globex",
+      "company_key": "globex",
+      "role": "Senior Software Engineer",
+      "date": "2026-10-02",
+      "tier": "GCC",
+      "yoe": "4-7",
+      "tech_stack": "Java, Spring, Kafka, Kubernetes",
+      "location": "Bengaluru (Hybrid)",
+      "ctc": "30-40 LPA",
+      "score": {
+        "value": 13,
+        "max": 14,
+        "capped": false,
+        "raw": "13/14"
+      },
+      "verdict": "✅ Apply",
+      "apply_via": "🎯 Aggressive Push",
+      "priority": "Dream",
+      "channel": "Careers (Greenhouse)",
+      "recommendation": "Round 2 done. Prepare system design: rate limiter, idempotent payments.",
+      "analysis_md": "> Analyzed: 02 Oct 2026\n\n### Score: 13/14 — ✅ Apply\n\n| Criterion | Score | Notes |\n|---|---|---|\n| Tech stack | 2/2 | Java, Spring Boot, Kafka, AWS — matches §5 |\n| YOE band | 2/2 | JD asks 3–6, you have ~4 |\n| Role type | 2/2 | Backend, target level |\n| Company tier | 2/2 | GCC |\n| Location | 2/2 | Bengaluru hybrid |\n| CTC potential | 1/2 | Reported 24–32 LPA — between Floor and Target |\n| WLB risk | 1/2 | 🟡 WLB rating 3.4, mixed reviews |\n\n### Red flags\n- \"Fast-paced\" appears three times in the JD.\n\n### How to apply — 🤝 Referral First\n① People search: https://www.linkedin.com/search/results/people/?keywords=Acme%20backend%20engineer\n② Connection note:\n> Hi <Name> — I'm a Java/Spring backend engineer (~4y). I moved a payments service to Kafka with exactly-once handling. Saw the Backend Engineer II role on your team — would you be open to referring me?\n③ Fallback: if no reply in 7 days, apply on the careers page.\n",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "🔄 Round 2",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-10-02"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-10-03"
+        },
+        {
+          "status": "📞 Interview Scheduled",
+          "date": "2026-10-12"
+        },
+        {
+          "status": "🔄 Round 1",
+          "date": "2026-10-15"
+        },
+        {
+          "status": "🔄 Round 2",
+          "date": "2026-10-22"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/globex-2"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 3,
+      "company": "Initech",
+      "company_key": "initech",
+      "role": "SDE II — Platform",
+      "date": "2026-11-10",
+      "tier": "?",
+      "yoe": "3-5",
+      "tech_stack": "Java/Spring/AWS (keyword hits)",
+      "location": "Hyderabad",
+      "ctc": "?",
+      "score": {
+        "value": null,
+        "max": 14,
+        "capped": false,
+        "raw": "⏳ Pending"
+      },
+      "verdict": "⏳ Pending",
+      "apply_via": "⏳ Pending",
+      "priority": "?",
+      "channel": "JobSpy",
+      "recommendation": "Pulled via /job-feed (pre-score 7/10) — run /job-match for deep analysis",
+      "analysis_md": "",
+      "posted_date": "2026-11-08",
+      "jd_text": "About the role\nWe are looking for a Backend Engineer to build payment APIs.\n\nRequirements\n- 3+ years with Java and Spring Boot\n- Experience with Kafka, PostgreSQL and AWS\n- Good understanding of microservices and REST API design\n\nNice to have\n- Kubernetes, Redis\n",
+      "status": "⏳ Pipeline",
+      "status_history": [
+        {
+          "status": "⏳ Pipeline",
+          "date": "2026-11-10"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/initech-3"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 4,
+      "company": "Umbrella Health",
+      "company_key": "umbrella health",
+      "role": "Backend Engineer",
+      "date": "2026-11-12",
+      "tier": "?",
+      "yoe": "2-5",
+      "tech_stack": "Java/Spring/PostgreSQL (keyword hits)",
+      "location": "Remote India",
+      "ctc": "?",
+      "score": {
+        "value": null,
+        "max": 14,
+        "capped": false,
+        "raw": "⏳ Pending"
+      },
+      "verdict": "⏳ Pending",
+      "apply_via": "⏳ Pending",
+      "priority": "?",
+      "channel": "Watchlist",
+      "recommendation": "Pulled via /job-feed watch (pre-score 6/10)",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "⏳ Pipeline",
+      "status_history": [
+        {
+          "status": "⏳ Pipeline",
+          "date": "2026-11-12"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/umbrella health-4"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 5,
+      "company": "Hooli",
+      "company_key": "hooli",
+      "role": "Software Engineer II",
+      "date": "2026-09-20",
+      "tier": "Tier-1",
+      "yoe": "3-6",
+      "tech_stack": "Java, distributed systems",
+      "location": "Bengaluru",
+      "ctc": "35-45 LPA",
+      "score": {
+        "value": 11,
+        "max": 14,
+        "capped": false,
+        "raw": "11/14"
+      },
+      "verdict": "🟡 Maybe",
+      "apply_via": "🤝 Referral First",
+      "priority": "Dream",
+      "channel": "Referral (a former colleague)",
+      "recommendation": "Failed the timed DSA test — graphs. Practise BFS/DFS before re-applying in 6 months.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "❌ Failed Assessment",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-09-20"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-09-21"
+        },
+        {
+          "status": "🔄 Assessment Sent",
+          "date": "2026-09-25"
+        },
+        {
+          "status": "🔄 Assessment Submitted",
+          "date": "2026-09-27"
+        },
+        {
+          "status": "❌ Failed Assessment",
+          "date": "2026-10-04"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/hooli-5"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 6,
+      "company": "Stark Logistics",
+      "company_key": "stark logistics",
+      "role": "Backend Developer",
+      "date": "2026-09-05",
+      "tier": "Tier-2",
+      "yoe": "3-5",
+      "tech_stack": "Java, Spring Boot, MySQL",
+      "location": "Pune",
+      "ctc": "18-24 LPA",
+      "score": {
+        "value": 9,
+        "max": 14,
+        "capped": false,
+        "raw": "9/14"
+      },
+      "verdict": "🟡 Maybe",
+      "apply_via": "📝 Direct Apply",
+      "priority": "Real",
+      "channel": "Naukri",
+      "recommendation": "No reply after 30 days.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "🚫 No Response",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-09-05"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-09-06"
+        },
+        {
+          "status": "🚫 No Response",
+          "date": "2026-10-07"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/stark logistics-6"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 7,
+      "company": "Wayne Fintech",
+      "company_key": "wayne fintech",
+      "role": "Senior Backend Engineer",
+      "date": "2026-10-15",
+      "tier": "Tier-2",
+      "yoe": "4-8",
+      "tech_stack": "Java, Spring, AWS, DynamoDB",
+      "location": "Gurugram (Hybrid)",
+      "ctc": "25-35 LPA",
+      "score": {
+        "value": 10,
+        "max": 14,
+        "capped": false,
+        "raw": "10/14"
+      },
+      "verdict": "🟡 Maybe",
+      "apply_via": "📝 Direct Apply",
+      "priority": "Real",
+      "channel": "Instahyre",
+      "recommendation": "Fill the screening form by Friday.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "📋 Form Pending",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-10-15"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-10-16"
+        },
+        {
+          "status": "📋 Form Pending",
+          "date": "2026-10-20"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/wayne fintech-7"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 8,
+      "company": "Soylent Systems",
+      "company_key": "soylent systems",
+      "role": "Java Developer",
+      "date": "2026-10-30",
+      "tier": "Consultancy",
+      "yoe": "?",
+      "tech_stack": "?",
+      "location": "?",
+      "ctc": "?",
+      "score": {
+        "value": null,
+        "max": 14,
+        "capped": true,
+        "raw": "— (HF capped)"
+      },
+      "verdict": "❌ Skip",
+      "apply_via": "❌ Skip",
+      "priority": "?",
+      "channel": "Indeed",
+      "recommendation": "Auto-skipped at the cheap gate: Consultancy/staffing",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "⏭️ Skipped",
+      "status_history": [
+        {
+          "status": "⏭️ Skipped",
+          "date": "2026-10-30"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/soylent systems-8"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 9,
+      "company": "Cyberdyne",
+      "company_key": "cyberdyne",
+      "role": "Backend Engineer (Contract)",
+      "date": "2026-11-02",
+      "tier": "Startup",
+      "yoe": "?",
+      "tech_stack": "?",
+      "location": "?",
+      "ctc": "?",
+      "score": {
+        "value": null,
+        "max": 14,
+        "capped": true,
+        "raw": "— (HF capped)"
+      },
+      "verdict": "❌ Skip",
+      "apply_via": "❌ Skip",
+      "priority": "?",
+      "channel": "LinkedIn",
+      "recommendation": "Auto-skipped at the cheap gate: Not a full-time role",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "⏭️ Skipped",
+      "status_history": [
+        {
+          "status": "⏭️ Skipped",
+          "date": "2026-11-02"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/cyberdyne-9"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 10,
+      "company": "Tyrell Cloud",
+      "company_key": "tyrell cloud",
+      "role": "Platform Engineer",
+      "date": "2026-08-18",
+      "tier": "GCC",
+      "yoe": "3-6",
+      "tech_stack": "Java, Kubernetes, Terraform",
+      "location": "Bengaluru (Hybrid)",
+      "ctc": "28-38 LPA",
+      "score": {
+        "value": 11,
+        "max": 14,
+        "capped": false,
+        "raw": "11/14"
+      },
+      "verdict": "🟡 Maybe",
+      "apply_via": "🤝 Referral First",
+      "priority": "Dream",
+      "channel": "Careers (Lever)",
+      "recommendation": "Rejected after the system-design round.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "❌ Rejected",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-08-18"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-08-19"
+        },
+        {
+          "status": "📞 Interview Scheduled",
+          "date": "2026-08-28"
+        },
+        {
+          "status": "🔄 Round 1",
+          "date": "2026-09-02"
+        },
+        {
+          "status": "❌ Rejected",
+          "date": "2026-09-09"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/tyrell cloud-10"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 11,
+      "company": "Vandelay Commerce",
+      "company_key": "vandelay commerce",
+      "role": "SDE II",
+      "date": "2026-11-05",
+      "tier": "Tier-1",
+      "yoe": "3-6",
+      "tech_stack": "Java, Spring Boot, Kafka",
+      "location": "Bengaluru",
+      "ctc": "28-40 LPA",
+      "score": {
+        "value": 12,
+        "max": 14,
+        "capped": false,
+        "raw": "12/14"
+      },
+      "verdict": "✅ Apply",
+      "apply_via": "🎯 Aggressive Push",
+      "priority": "Dream",
+      "channel": "Careers",
+      "recommendation": "Referral asked on 6 Nov — follow up on 13 Nov.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "🔄 Referral Pending",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-11-05"
+        },
+        {
+          "status": "✅ Applied",
+          "date": "2026-11-06"
+        },
+        {
+          "status": "🔄 Referral Pending",
+          "date": "2026-11-06"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/vandelay commerce-11"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    },
+    {
+      "id": 12,
+      "company": "Massive Dynamic",
+      "company_key": "massive dynamic",
+      "role": "Backend Engineer",
+      "date": "2026-11-14",
+      "tier": "Startup",
+      "yoe": "2-5",
+      "tech_stack": "Kotlin, Spring Boot, GCP",
+      "location": "Remote India",
+      "ctc": "20-28 LPA",
+      "score": {
+        "value": 8,
+        "max": 14,
+        "capped": false,
+        "raw": "8/14"
+      },
+      "verdict": "⚠️ Practice",
+      "apply_via": "⏩ Low Priority",
+      "priority": "Practice",
+      "channel": "Cutshort",
+      "recommendation": "Kotlin-first. Apply only with spare time.",
+      "analysis_md": "",
+      "posted_date": null,
+      "jd_text": "",
+      "status": "📝 To Do",
+      "status_history": [
+        {
+          "status": "📝 To Do",
+          "date": "2026-11-14"
+        }
+      ],
+      "urls": [
+        {
+          "label": "Link",
+          "url": "https://example.com/jobs/massive dynamic-12"
+        }
+      ],
+      "url_note": "",
+      "archived": false,
+      "archived_on": null
+    }
+  ]
+}

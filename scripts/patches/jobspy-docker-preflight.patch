@@ -1,0 +1,68 @@
+--- a/src/tools/search-jobs.js
++++ b/src/tools/search-jobs.js
+@@ -177,7 +177,28 @@
+     logger.info(`Spawning process with args: ${cmd}`);
+ 
+     const timeout = params.timeout || 60000; // Default timeout of 60 seconds
+-    result = execSync(cmd, { timeout }).toString();
++
++    // Preflight: fail LOUDLY with actionable guidance instead of an opaque error.
++    // JobSpy scrapes via `docker run --rm jobspy`, so both the daemon and the image must exist.
++    try {
++      execSync(`${dockerCmd} version`, { stdio: 'pipe', timeout: 15000 });
++    } catch (e) {
++      throw new Error(
++        `JobSpy requires Docker, but the '${dockerCmd}' command is unavailable or the Docker daemon is not running. ` +
++        `Start Docker Desktop (on WSL: Settings → Resources → WSL Integration → enable this distro), then retry. ` +
++        `Underlying: ${e.stderr?.toString().trim() || e.message}`
++      );
++    }
++    try {
++      execSync(`${dockerCmd} image inspect jobspy`, { stdio: 'pipe', timeout: 15000 });
++    } catch (e) {
++      throw new Error(
++        `Docker is running but the 'jobspy' image is not built. ` +
++        `Build it once: ${dockerCmd} build -t jobspy <jobspy-mcp-server>/jobspy , then retry.`
++      );
++    }
++
++    result = execSync(cmd, { timeout, stdio: ['pipe', 'pipe', 'pipe'] }).toString();
+ 
+     const parsedData = JSON.parse(result);
+ 
+@@ -200,11 +221,30 @@
+       jobs: data || [],
+     };
+   } catch (error) {
+-    logger.error('Error in searchJobsHandler', {
+-      error: error.message,
+-      result,
+-    });
+-    throw error;
++    // Already an actionable JobSpy error (e.g. from preflight) — pass it through verbatim.
++    if (error instanceof Error && error.message.startsWith('JobSpy') || error.message?.startsWith('Docker is running')) {
++      logger.error('Error in searchJobsHandler', { error: error.message });
++      throw error;
++    }
++
++    const stderr = error.stderr ? error.stderr.toString().trim() : '';
++    const detail = stderr || error.message || String(error);
++    logger.error('Error in searchJobsHandler', { error: detail, result });
++
++    // Translate common Docker failures into a clear message (avoids opaque "[object Object]").
++    const lower = detail.toLowerCase();
++    if (lower.includes('docker') && (lower.includes('not found') || lower.includes('cannot connect') || lower.includes('daemon') || lower.includes('not recognized'))) {
++      throw new Error(
++        `JobSpy could not run because Docker is unavailable: ${detail}. ` +
++        `Start Docker (enable WSL integration if on WSL) and retry.`
++      );
++    }
++    if (lower.includes('unable to find image') || lower.includes('no such image')) {
++      throw new Error(
++        `JobSpy 'jobspy' Docker image is missing. Build it: docker build -t jobspy <jobspy-mcp-server>/jobspy , then retry.`
++      );
++    }
++    throw new Error(`JobSpy job search failed: ${detail}`);
+   }
+ }
+ 

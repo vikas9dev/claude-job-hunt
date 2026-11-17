@@ -1,0 +1,17 @@
+{
+  "enabledMcpjsonServers": [
+    "jobspy"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/job_track.py:*)",
+      "Bash(python scripts/job_track.py:*)",
+      "Bash(python3 scripts/resume_match.py:*)",
+      "Bash(python scripts/resume_match.py:*)",
+      "Bash(python3 scripts/interview_track.py:*)",
+      "Bash(python scripts/interview_track.py:*)",
+      "Bash(pdftotext:*)",
+      "mcp__jobspy__search_jobs"
+    ]
+  }
+}

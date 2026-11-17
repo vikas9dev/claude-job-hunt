@@ -1,0 +1,19 @@
+# ── Personal data — never commit ─────────────────────────────
+.claude/skills/_shared/PROFILE_AND_FILTERS.md
+data/*
+!data/.gitkeep
+resume/*
+!resume/master.template.html
+!resume/README.md
+offers/
+reports/*
+!reports/.gitkeep
+
+# ── Local tooling ────────────────────────────────────────────
+.mcp.json
+.mcp.json.bak
+mcp_servers/
+.claude/settings.local.json
+__pycache__/
+*.pyc
+.DS_Store

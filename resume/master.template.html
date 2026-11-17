@@ -1,0 +1,105 @@
+<!doctype html>
+<!--
+  MASTER RESUME TEMPLATE — one page, single column, ATS-safe.
+
+  How to use:
+    1. Copy this file to resume/master.html (gitignored) and replace every placeholder.
+       Or run /setup-profile in Claude Code.
+    2. Render it:  python3 scripts/resume_match.py render resume/master.html
+       (writes "<Your Name> - Resume.pdf" next to the HTML and prints the page count)
+
+  Rules:
+    - Keep the structure: edit text inside the existing tags, add or remove whole
+      <li> / .job / <p> blocks only. Do not add columns, tables, icons or images —
+      ATS parsers read this top to bottom.
+    - It must fit on ONE page. If render reports 2 pages, cut the weakest bullet.
+    - Do not shrink the font below 9pt.
+    - Bullets: action verb + what you did + a bold number. No "I".
+    - /resume-tailor never edits this file. It copies it to resume/tailored/<slug>/.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Your Name Resume</title>
+<style>
+  @page { size: A4; margin: 11mm 14mm 9mm 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body { font-family: "Liberation Sans", Arial, sans-serif; font-size: 9.5pt; line-height: 1.28; color: #222; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 1.5px; }
+  h1 { font-size: 21pt; font-weight: 700; color: #111; letter-spacing: .4px; }
+  .tagline { font-size: 11.5pt; font-weight: 700; color: #1F5FBF; margin-top: 2px; }
+  .contact { margin-top: 5px; font-size: 9.5pt; }
+  .notice { margin-top: 3px; font-size: 9.5pt; font-weight: 700; }
+  h2 { font-size: 11.5pt; font-weight: 700; color: #111; letter-spacing: .5px;
+    border-bottom: 1.5px solid #111; padding-bottom: 1px; margin: 9px 0 4px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .role { font-weight: 700; font-size: 10.5pt; color: #111; }
+  .dates { font-size: 9.5pt; white-space: nowrap; }
+  .org { font-size: 10pt; color: #1F5FBF; font-weight: 700; }
+  .org span { color: #444; font-weight: 400; }
+  .job + .job { margin-top: 5px; }
+  ul { padding-left: 15px; margin-top: 2px; }
+  li { margin-bottom: 1px; }
+  .skills p + p { margin-top: 2px; }
+</style>
+
+</head>
+<body>
+
+<h1>Your Name</h1>
+<div class="tagline">Backend Software Engineer | Language · Framework · Cloud · Messaging</div>
+<div class="contact">+00 00000 00000 | <a href="mailto:you@example.com">you@example.com</a> | City, Country | <a href="https://www.linkedin.com/in/your-handle/">linkedin.com/in/your-handle</a> | <a href="https://github.com/your-handle">github.com/your-handle</a>
+</div>
+<div class="notice">Notice period: XX days | Open to: City A, City B, Remote</div>
+
+<h2>SUMMARY</h2>
+<p>Software engineer with <b>N years</b> building <b>backend services</b> in Language and Framework. Shipped features used by <b>N users</b> in the Domain domain. Strong in system design, databases and cloud (Cloud Provider). Two or three lines at most.</p>
+
+<h2>EXPERIENCE</h2>
+<div class="job">
+  <div class="row"><span class="role">Software Engineer II</span><span class="dates">Mon YYYY – Present</span></div>
+  <div class="org">Company A <span>· City, Country</span></div>
+  <ul>
+    <li>Built the Feature X service in Framework, handling <b>N requests/day</b> with p99 latency under <b>N ms</b>.</li>
+    <li>Cut the Process Y time by <b>N%</b> by moving it from a batch job to an event-driven flow on Messaging Tool.</li>
+    <li>Designed the Database schema for Module Z; query time dropped from <b>N s to N ms</b> after adding the right indexes.</li>
+    <li>Led the migration of <b>N services</b> to Container Platform, removing <b>N hours/week</b> of manual deploys.</li>
+    <li>Wrote unit and integration tests that raised coverage from <b>N% to N%</b>.</li>
+    <li>Mentored <b>N engineers</b> and reviewed code across the team.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="row"><span class="role">Software Engineer</span><span class="dates">Mon YYYY – Mon YYYY</span></div>
+  <div class="org">Company B <span>· City, Country</span></div>
+  <ul>
+    <li>Developed REST APIs for Product Area, used by <b>N clients</b>.</li>
+    <li>Reduced cloud cost by <b>N%</b> by right-sizing instances and adding caching.</li>
+    <li>Fixed a production issue in Component that caused <b>N failed transactions/day</b>.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="row"><span class="role">Intern / Associate Engineer</span><span class="dates">Mon YYYY – Mon YYYY</span></div>
+  <div class="org">Company C <span>· City, Country</span></div>
+  <ul>
+    <li>Built an internal tool in Language that saved the team <b>N hours/week</b>.</li>
+  </ul>
+</div>
+
+<h2>SKILLS</h2>
+<div class="skills">
+  <p><b>Languages:</b> Language 1, Language 2, SQL</p>
+  <p><b>Frameworks:</b> Framework 1, Framework 2, Testing Library</p>
+  <p><b>Cloud &amp; DevOps:</b> Cloud Provider (Service 1, Service 2), Docker, Kubernetes, CI/CD Tool</p>
+  <p><b>Data &amp; Messaging:</b> Database 1, Database 2, Cache, Message Broker</p>
+</div>
+
+<h2>CERTIFICATIONS</h2>
+<p><b>Certification Name</b> — Issuer, Mon YYYY (<a href="https://example.com/your-badge">verify</a>)</p>
+
+<h2>EDUCATION</h2>
+<div class="row"><span class="role">Degree, Branch</span><span class="dates">YYYY – YYYY</span></div>
+<div>College / University Name, City</div>
+
+</body>
+</html>

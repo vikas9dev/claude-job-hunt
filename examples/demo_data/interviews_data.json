@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "estimate-before-design",
+      "title": "Do a capacity estimate before drawing boxes",
+      "category": "technical",
+      "status": "open",
+      "detail": "Both design rounds lost points on numbers: no traffic or storage estimate, then no basis for the design choices.",
+      "practice": "For every design question, write 3 numbers first: requests/sec, data size per year, read/write ratio.",
+      "seen_in": [
+        "tyrell-platform-2026-09",
+        "globex-sse-2026-10"
+      ]
+    },
+    {
+      "id": "clarify-requirements-first",
+      "title": "Ask clarifying questions before designing",
+      "category": "communication",
+      "status": "fixed",
+      "detail": "Jumped straight into components in the first design round.",
+      "practice": "Spend the first 5 minutes on scope: users, scale, must-have features.",
+      "seen_in": [
+        "tyrell-platform-2026-09"
+      ]
+    },
+    {
+      "id": "state-complexity-early",
+      "title": "State time and space complexity before coding",
+      "category": "technical",
+      "status": "open",
+      "detail": "Gave complexity only when asked.",
+      "practice": "Say 'This is O(n log n) time, O(n) space' right after describing the approach.",
+      "seen_in": [
+        "tyrell-platform-2026-09"
+      ]
+    },
+    {
+      "id": "ask-interviewer-questions",
+      "title": "Keep two questions ready for each interviewer",
+      "category": "preparation",
+      "status": "open",
+      "detail": "Had no questions at the end of round 1. It can read as low interest.",
+      "practice": "Ask about their team's work: 'What is the hardest problem your team solved this year?'",
+      "seen_in": [
+        "globex-sse-2026-10"
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "slug": "tyrell-platform-2026-09",
+      "company": "Tyrell Cloud",
+      "role": "Platform Engineer",
+      "job_id": 10,
+      "first_date": "2026-09-02",
+      "last_date": "2026-09-08",
+      "outcome": "rejected",
+      "stage_reached": "Round 2 — System design",
+      "summary": "Passed the coding round. Lost the system-design round: jumped into components before asking about scale.",
+      "lessons": [
+        "estimate-before-design",
+        "clarify-requirements-first",
+        "state-complexity-early"
+      ],
+      "rounds": [
+        {
+          "name": "Round 1 — Coding",
+          "date": "2026-09-02",
+          "format": "DSA",
+          "interviewer": "Senior engineer",
+          "result": "passed",
+          "questions": [
+            {
+              "q": "Merge overlapping intervals",
+              "topic": "Arrays",
+              "my_answer": "Sort by start, merge in one pass.",
+              "better_answer": "Same — and state O(n log n) time, O(n) space before coding.",
+              "verdict": "🟢"
+            },
+            {
+              "q": "Find the k most frequent words",
+              "topic": "Heaps",
+              "my_answer": "Sorted the whole map.",
+              "better_answer": "Min-heap of size k: O(n log k). Mention the tie-break rule.",
+              "verdict": "🟡"
+            }
+          ],
+          "went_well": [
+            "Talked through the approach before coding"
+          ],
+          "went_wrong": [
+            "Did not state complexity until asked"
+          ]
+        },
+        {
+          "name": "Round 2 — System design",
+          "date": "2026-09-08",
+          "format": "system design",
+          "interviewer": "Engineering manager",
+          "result": "failed",
+          "questions": [
+            {
+              "q": "Design a URL shortener",
+              "topic": "System design",
+              "my_answer": "Drew services and a DB right away.",
+              "better_answer": "First ask: reads/sec, writes/sec, URL lifetime, custom aliases. Then estimate storage, then design. Key choice: base62 ID from a counter vs a hash.",
+              "verdict": "🔴"
+            }
+          ],
+          "went_well": [
+            "Good caching discussion"
+          ],
+          "went_wrong": [
+            "No clarifying questions",
+            "No capacity estimate",
+            "Ran out of time for the deep dive"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "globex-sse-2026-10",
+      "company": "Globex",
+      "role": "Senior Software Engineer",
+      "job_id": 2,
+      "first_date": "2026-10-15",
+      "last_date": "2026-10-22",
+      "outcome": "in-progress",
+      "stage_reached": "Round 2 — System design",
+      "summary": "Two rounds done. Coding went well. Design round was better than last time but still short on numbers.",
+      "lessons": [
+        "estimate-before-design",
+        "ask-interviewer-questions"
+      ],
+      "rounds": [
+        {
+          "name": "Round 1 — Coding",
+          "date": "2026-10-15",
+          "format": "DSA",
+          "interviewer": "Senior engineer",
+          "result": "passed",
+          "questions": [
+            {
+              "q": "LRU cache",
+              "topic": "Design / hashing",
+              "my_answer": "HashMap + doubly linked list, O(1) get/put.",
+              "better_answer": "Same. Also mention LinkedHashMap with accessOrder=true as the quick Java version.",
+              "verdict": "🟢"
+            }
+          ],
+          "went_well": [
+            "Clean code, tested edge cases aloud"
+          ],
+          "went_wrong": []
+        },
+        {
+          "name": "Round 2 — System design",
+          "date": "2026-10-22",
+          "format": "system design",
+          "interviewer": "Staff engineer",
+          "result": "pending",
+          "questions": [
+            {
+              "q": "Design a payment idempotency layer",
+              "topic": "System design",
+              "my_answer": "Idempotency key table with a unique constraint.",
+              "better_answer": "Key + request hash stored with status (in-progress / done) and the saved response; return the saved response on retry; TTL for cleanup; reject a reused key with a different body.",
+              "verdict": "🟡"
+            },
+            {
+              "q": "How many requests per second can one Postgres node take?",
+              "topic": "Estimation",
+              "my_answer": "Not sure — guessed.",
+              "better_answer": "Give a range with reasons: a few thousand simple writes/sec on one node; reads scale with replicas and cache. Say the assumption out loud.",
+              "verdict": "🔴"
+            }
+          ],
+          "went_well": [
+            "Asked clarifying questions first this time"
+          ],
+          "went_wrong": [
+            "Weak on capacity numbers"
+          ]
+        }
+      ]
+    }
+  ]
+}
